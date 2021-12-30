@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+<!-- <template id="report_patient">
+        <t t-call="web.html_container">
+            <t t-foreach="docs" t-as="doc">
+                <t t-call="web.external_layout">
+                    <div class="page">
+                        <h1>helllo world</h1>
+                    </div>
+                </t>
+            </t>
+        </t>
+    </template> -->
+    <data>
+        <report id="report_patient_card" 
+            model="hospital.patient" 
+            string="Patient Card"
+            report_type="qweb-pdf" 
+            name="om_hospital.report_patient" 
+            file="om_hospital.report_patient"
+        />
+         <!-- <report id="report_patient_card" 
+            model="hospital.patient" 
+            string="Patient Card"
+            report_type="qweb-pdf" 
+            menu="False"
+            name="om_hospital.report_patient" 
+            file="om_hospital.report_patient"
+        /> -->
+        <report id="report_patient_card_xlx" 
+            model="hospital.patient" 
+            string="Patient Card Excel"
+            report_type="xlsx" 
+            name="om_hospital.report_patient_xls" 
+            file="om_hospital.report_patient_xls"
+        />
+    </data>
+</odoo>

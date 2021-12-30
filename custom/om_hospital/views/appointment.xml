@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+
+    <record id="appointment_tree" model="ir.ui.view">
+        <field name="name">hospital.appointment.tree</field>
+        <field name="model">hospital.appointment</field>
+        <field name="arch" type="xml">
+            <tree decoration-info="state == 'draft'" decoration-muted="state == 'cancel'"
+                  decoration-success="state == 'done'" decoration-danger="state == 'confirm'">
+                <field name="name"/>
+                <field name="patient_id"/>
+                <field name="patient_age"/>
+                <field name="appointment_date"/>
+                <field name="notes"/>
+                <field name="state"/>
+            </tree>
+        </field>
+    </record>
+
+
+    <record id="appointment_form" model="ir.ui.view">
+        <field name="name">hospital.appointment.form</field>
+        <field name="model">hospital.appointment</field>
+        <field name="arch" type="xml">
+            <form string="patient">
+                <header>
+                    <button name="delete_lines" type="object" string="Delete" class="oe_highlight"/>
+                    <button name="action_confirm" string="Confirm" type="object" class="oe_highlight" states="draft"/>
+                    <button name="action_done" string="Done" type="object" class="btn btn-info" states="confirm"/>
+                    <field name="state" widget="statusbar" statusbar_visible="draft,done,confirm"/>
+                </header>
+                <sheet>
+                    <div class="oe_title">
+                        <h1>
+                            <field name="name" readonly="1"></field>
+                        </h1>
+                    </div>
+                    <group>
+                        <group>
+                            <field name="patient_id"/>
+                            <field name="notes"/>
+                            <field name="partner_id"/>
+                            <field name="order_id"/>
+                            <!--                            <field name="name" invisible="1"/>-->
+                        </group>
+                        <group>
+                            <field name="patient_age"/>
+                            <field name="appointment_datetime"/>
+                            <field name="appointment_date" options='{"datepicker": {"daysOfWeekDisabled": [0, 5, 6]}}'/>
+
+                        </group>
+                    </group>
+                    <notebook>
+                        <page string="Info">
+                            <field name="notes"/>
+                        </page>
+                        <page string="App">
+                            <field name="appointment_lines">
+                                <tree editable="bottom">
+                                    <field name="product_id"/>
+                                    <field name="product_qty"/>
+                                    <field name="appointment_id"/>
+                                </tree>
+                            </field>
+                            <!-- <field name="line_ids"/> -->
+                        </page>
+                        <page string="Appointment">
+                            <!-- <field name="line_ids"/> -->
+                        </page>
+                    </notebook>
+                </sheet>
+                <div class="oe_chatter">
+                    <field name="message_follower_ids" widget="mail_followers"/>
+                    <field name="activity_ids" widget="mail_activity"/>
+                    <field name="message_ids" widget="mail_thread" options="{'post_refresh':'recipients'}"/>
+                </div>
+            </form>
+        </field>
+    </record>
+
+    <!--     <record id="appointment_pivot" model="ir.ui.view">-->
+    <!--        <field name="name">hospital.appointment.pivot</field>-->
+    <!--        <field name="model">hospital.appointment</field>-->
+    <!--        <field name="arch" type="xml">-->
+    <!--            <pivot string="Appointment">-->
+    <!--                <field name="doctor_id" type="row"/>-->
+    <!--                <field name="appointment_date" type="col" interval="day"/>-->
+    <!--            </pivot>-->
+    <!--        </field>-->
+    <!--    </record>-->
+
+    <record id="appointment_calendar" model="ir.ui.view">
+        <field name="name">hospital.appointment.calendar</field>
+        <field name="model">hospital.appointment</field>
+        <field name="arch" type="xml">
+            <calendar string="Appointment Calendar" date_start="appointment_date" color="patient_id" mode="month"
+                      quick_add="True">
+                <field name="name"/>
+                <field name="patient_id"/>
+            </calendar>
+        </field>
+    </record>
+
+    <record id="appointment_graph" model="ir.ui.view">
+        <field name="name">hospital.appointment.graph</field>
+        <field name="model">hospital.appointment</field>
+        <field name="arch" type="xml">
+            <graph string="Appointment Graph" type="line" sample="1" disable_linking="1">
+                <field name="amount"/>
+
+                <field name="patient_id"/>
+            </graph>
+        </field>
+    </record>
+
+    <record id="action_appointment" model="ir.actions.act_window">
+        <field name="name">Appointment</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">hospital.appointment</field>
+        <field name="view_mode">calendar,tree,form,graph,pivot</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">Testing my odoo app
+                create first patient!
+            </p>
+        </field>
+    </record>
+
+
+    <menuitem id="hospital_patient" name="Appointment" parent="hospital_root" action="action_appointment"/>
+
+
+</odoo>

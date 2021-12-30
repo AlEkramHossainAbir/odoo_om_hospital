@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="weblearns_odoo_14_development_channel" model="slide.channel">
+        <field name="name">Weblearns Odoo 14 Developement</field>
+        <field name="user_id" ref="base.user_admin"/>
+        <field name="enroll">public</field>
+        <field name="channel_type">training</field>
+        <field name="allow_comment" eval="True"/>
+        <field name="sequence">1</field>
+        <field name="tag_ids" eval="[(6,0,[ref('website_slides.slide_channel_tag_level_basic'),
+                                        ref('website_slides.slide_channel_tag_level_intermediate'),
+                                        ref('website_slides.slide_channel_tag_level_advanced')])]" />
+        <field name="promote_strategy">latest</field>
+        <field name="is_published" eval="True"/>
+        <field name="image_1920" type="base64" file="weblearns_odoo_tutorial/static/description/weblearns_odoo_14_development_tutorial.png"/>
+        <field name="description">Odoo development tutorial from scratch.</field>
+        <field name="create_date" eval="DateTime.now() - relativedelta(days=7)"/>
+    </record>
+
+</odoo>

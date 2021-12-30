@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="weblearns_slide" model="slide.slide">
+        <field name="name">Odoo Basic and CLI Commands.</field>
+        <field name="sequence">0</field>
+        <field name="is_category" eval="True"/>
+        <field name="channel_id" ref="weblearns_odoo_tutorial.weblearns_odoo_14_development_channel"/>
+        <field name="slide_type">document</field>
+    </record>
+
+    <record id="weblearns_slide_1" model="slide.slide">
+        <field name="name">How to execute Odoo service from terminal.</field>
+        <field name="sequence">1</field>
+        <field name="url">https://www.youtube.com/watch?v=A9dpLBp9isY</field>
+        <field name="slide_type">video</field>
+        <field name="channel_id" ref="weblearns_odoo_tutorial.weblearns_odoo_14_development_channel"/>
+        <field name="is_published" eval="True"/>
+        <field name="is_preview" eval="True"/>
+        <field name="completion_time">1</field>
+        <field name="description">How to execute Odoo from terminal.</field>
+    </record>
+
+    <record id="weblearns_slide_2" model="slide.slide">
+        <field name="name">Useful URLs in Odoo</field>
+        <field name="sequence">2</field>
+        <field name="url">https://www.youtube.com/watch?v=3oUzyQRzGlw</field>
+        <field name="slide_type">video</field>
+        <field name="channel_id" ref="weblearns_odoo_tutorial.weblearns_odoo_14_development_channel"/>
+        <field name="is_published" eval="True"/>
+        <field name="is_preview" eval="True"/>
+        <field name="completion_time">1</field>
+        <field name="description">Use full urls you need to know.</field>
+    </record>
+
+    <record id="weblearns_slide_3" model="slide.slide">
+        <field name="name">Useful CLI commands in Odoo</field>
+        <field name="sequence">3</field>
+        <field name="url">https://www.youtube.com/watch?v=8AXc3xHFG4Q</field>
+        <field name="slide_type">video</field>
+        <field name="channel_id" ref="weblearns_odoo_tutorial.weblearns_odoo_14_development_channel"/>
+        <field name="is_published" eval="True"/>
+        <field name="is_preview" eval="True"/>
+        <field name="completion_time">1</field>
+        <field name="description">xmlrpc-port, db-user, db-password, addons-path command you will learns.</field>
+    </record>
+
+    <record id="weblearns_slide_4" model="slide.slide">
+        <field name="name">How to generate/update configuration file in Odoo.</field>
+        <field name="sequence">4</field>
+        <field name="url">https://www.youtube.com/watch?v=bbNaoEzKuxk</field>
+        <field name="slide_type">video</field>
+        <field name="channel_id" ref="weblearns_odoo_tutorial.weblearns_odoo_14_development_channel"/>
+        <field name="is_published" eval="True"/>
+        <field name="is_preview" eval="True"/>
+        <field name="completion_time">1</field>
+        <field name="description">What is configuration file and how you can use config file in Odoo.</field>
+    </record>
+
+    <record id="weblearns_slide_5" model="slide.slide">
+        <field name="name">Logger CLI Commands in Odoo</field>
+        <field name="sequence">5</field>
+        <field name="url">https://www.youtube.com/watch?v=OXHPLGOTe9U</field>
+        <field name="slide_type">video</field>
+        <field name="channel_id" ref="weblearns_odoo_tutorial.weblearns_odoo_14_development_channel"/>
+        <field name="is_published" eval="True"/>
+        <field name="is_preview" eval="True"/>
+        <field name="completion_time">1</field>
+        <field name="description">Odoo logs, DB Logs, Http Logs you will learn.</field>
+    </record>
+
+    <record id="weblearns_slide_6" model="slide.slide">
+        <field name="name">Database CLI Commands in Odoo</field>
+        <field name="sequence">6</field>
+        <field name="url">https://www.youtube.com/watch?v=av03WeGwTcY</field>
+        <field name="slide_type">video</field>
+        <field name="channel_id" ref="weblearns_odoo_tutorial.weblearns_odoo_14_development_channel"/>
+        <field name="is_published" eval="True"/>
+        <field name="is_preview" eval="True"/>
+        <field name="completion_time">1</field>
+        <field name="description">Database related commands you will learn.</field>
+    </record>
+
+    <record id="weblearns_slide_7" model="slide.slide">
+        <field name="name">How to disable database manager link in Odoo</field>
+        <field name="sequence">7</field>
+        <field name="url">https://www.youtube.com/watch?v=Nb4wLY1X9yQ</field>
+        <field name="slide_type">video</field>
+        <field name="channel_id" ref="weblearns_odoo_tutorial.weblearns_odoo_14_development_channel"/>
+        <field name="is_published" eval="True"/>
+        <field name="is_preview" eval="True"/>
+        <field name="completion_time">1</field>
+        <field name="description">DB list and related pages hide user can hide.</field>
+    </record>
+
+    <record id="weblearns_slide_8" model="slide.slide">
+        <field name="name">How to configure Odoo project in Pycharm Editor</field>
+        <field name="sequence">8</field>
+        <field name="url">https://www.youtube.com/watch?v=T3_riei-Ta8</field>
+        <field name="slide_type">video</field>
+        <field name="channel_id" ref="weblearns_odoo_tutorial.weblearns_odoo_14_development_channel"/>
+        <field name="is_published" eval="True"/>
+        <field name="is_preview" eval="True"/>
+        <field name="completion_time">1</field>
+        <field name="description">We are going to configure Odoo in Pycharm editor.</field>
+    </record>
+
+    <record id="weblearns_slide_9" model="slide.slide">
+        <field name="name">Basic Understanding Odoo module version</field>
+        <field name="sequence">9</field>
+        <field name="url">https://www.youtube.com/watch?v=wIwxPY8_qyY</field>
+        <field name="slide_type">video</field>
+        <field name="channel_id" ref="weblearns_odoo_tutorial.weblearns_odoo_14_development_channel"/>
+        <field name="is_published" eval="True"/>
+        <field name="is_preview" eval="True"/>
+        <field name="completion_time">1</field>
+        <field name="description">How to define version in module level you will learn.</field>
+    </record>
+
+    <record id="weblearns_slide_10" model="slide.slide">
+        <field name="name">What is __manifest__ file</field>
+        <field name="sequence">10</field>
+        <field name="url">https://www.youtube.com/watch?v=6U9pd309Jeo</field>
+        <field name="slide_type">video</field>
+        <field name="channel_id" ref="weblearns_odoo_tutorial.weblearns_odoo_14_development_channel"/>
+        <field name="is_published" eval="True"/>
+        <field name="is_preview" eval="True"/>
+        <field name="completion_time">1</field>
+        <field name="description">Basic understanding about manifest file in Odoo.</field>
+    </record>
+
+    <record id="weblearns_slide_11" model="slide.slide">
+        <field name="name">Shell CLI Commands in Odoo</field>
+        <field name="sequence">11</field>
+        <field name="url">https://www.youtube.com/watch?v=yKWJ9wkNHFU</field>
+        <field name="slide_type">video</field>
+        <field name="channel_id" ref="weblearns_odoo_tutorial.weblearns_odoo_14_development_channel"/>
+        <field name="is_published" eval="True"/>
+        <field name="is_preview" eval="True"/>
+        <field name="completion_time">1</field>
+        <field name="description">How to use Shell command in Odoo.</field>
+    </record>
+
+    <record id="weblearns_slide_12" model="slide.slide">
+        <field name="name">How to create custom module in Odoo</field>
+        <field name="sequence">12</field>
+        <field name="url">https://www.youtube.com/watch?v=yiiqXIuhq50</field>
+        <field name="slide_type">video</field>
+        <field name="channel_id" ref="weblearns_odoo_tutorial.weblearns_odoo_14_development_channel"/>
+        <field name="is_published" eval="True"/>
+        <field name="is_preview" eval="True"/>
+        <field name="completion_time">1</field>
+        <field name="description">Going to learn create module in Odoo.</field>
+    </record>
+
+    <record id="weblearns_slide_13" model="slide.slide">
+        <field name="name">How to create custom model in Odoo</field>
+        <field name="sequence">13</field>
+        <field name="url">https://www.youtube.com/watch?v=Az8G4Y5r3Xg</field>
+        <field name="slide_type">video</field>
+        <field name="channel_id" ref="weblearns_odoo_tutorial.weblearns_odoo_14_development_channel"/>
+        <field name="is_published" eval="True"/>
+        <field name="is_preview" eval="True"/>
+        <field name="completion_time">1</field>
+        <field name="description">Create custom model in Odoo.</field>
+    </record>
+
+    <record id="weblearns_slide_14" model="slide.slide">
+        <field name="name">Auto file columns/fields created for each model in Odoo</field>
+        <field name="sequence">14</field>
+        <field name="url">https://www.youtube.com/watch?v=oEEAegGzl7o</field>
+        <field name="slide_type">video</field>
+        <field name="channel_id" ref="weblearns_odoo_tutorial.weblearns_odoo_14_development_channel"/>
+        <field name="is_published" eval="True"/>
+        <field name="is_preview" eval="True"/>
+        <field name="completion_time">1</field>
+        <field name="description">Odoo auto create file columns/fields in Odoo.</field>
+    </record>
+
+    <record id="weblearns_slide_datatype_fields" model="slide.slide">
+        <field name="name">Odoo Basic Fields.</field>
+        <field name="sequence">15</field>
+        <field name="is_category" eval="True"/>
+        <field name="channel_id" ref="weblearns_odoo_tutorial.weblearns_odoo_14_development_channel"/>
+        <field name="slide_type">document</field>
+    </record>
+
+    <record id="weblearns_slide_15" model="slide.slide">
+        <field name="name">Define Character field in Odoo</field>
+        <field name="sequence">15</field>
+        <field name="url">https://www.youtube.com/watch?v=hOSgTJo3has</field>
+        <field name="slide_type">video</field>
+        <field name="channel_id" ref="weblearns_odoo_tutorial.weblearns_odoo_14_development_channel"/>
+        <field name="is_published" eval="True"/>
+        <field name="is_preview" eval="True"/>
+        <field name="completion_time">1</field>
+        <field name="description">Character field define in Odoo.</field>
+    </record>
+
+    <record id="weblearns_slide_16" model="slide.slide">
+        <field name="name">Define Float field in Odoo</field>
+        <field name="sequence">16</field>
+        <field name="url">https://www.youtube.com/watch?v=Sfalh5xjmOw</field>
+        <field name="slide_type">video</field>
+        <field name="channel_id" ref="weblearns_odoo_tutorial.weblearns_odoo_14_development_channel"/>
+        <field name="is_published" eval="True"/>
+        <field name="is_preview" eval="True"/>
+        <field name="completion_time">1</field>
+        <field name="description">Float field define in Odoo.</field>
+    </record>
+
+    <record id="weblearns_slide_17" model="slide.slide">
+        <field name="name">Define Boolean field in Odoo</field>
+        <field name="sequence">17</field>
+        <field name="url">https://www.youtube.com/watch?v=7zpk7GBqumQ</field>
+        <field name="slide_type">video</field>
+        <field name="channel_id" ref="weblearns_odoo_tutorial.weblearns_odoo_14_development_channel"/>
+        <field name="is_published" eval="True"/>
+        <field name="is_preview" eval="True"/>
+        <field name="completion_time">1</field>
+        <field name="description">Define Boolean field in Odoo.</field>
+    </record>
+</odoo>

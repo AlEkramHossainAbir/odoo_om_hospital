@@ -1,0 +1,68 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+    <record id="doctor_tree" model="ir.ui.view">
+        <field name="name">hospital.doctor.tree</field>
+        <field name="model">hospital.doctor</field>
+        <field name="arch" type="xml">
+            <tree string="doctor">
+                <field name="name_seq"/>
+                <field name="doctor_name"/>
+                <field name="doctor_age"/>
+                <field name="gender"/>
+                <field name="notes"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="doctor_form" model="ir.ui.view">
+        <field name="name">hospital.doctor.form</field>
+        <field name="model">hospital.doctor</field>
+        <field name="arch" type="xml">
+             <form string="doctor">
+            <sheet>
+                    <div class="oe_title">
+                        <h1>
+                            <field name="name_seq" readonly="1"></field>
+                        </h1>
+                    </div>
+                <group>
+                    <field name="doctor_name" />
+                    <field name="gender"/>
+                </group>
+                <group>
+                    <field name="doctor_age" />
+                    <field name="notes"/>
+                </group>
+                  <notebook>
+                        <page string="Info">
+                            <field name="notes"/>
+                        </page>
+                        <page string="Doctor">
+                            <!-- <field name="line_ids"/> -->
+                        </page>
+                        <page string="Patient">
+                            <!-- <field name="line_ids"/> -->
+                        </page>
+                    </notebook>
+            </sheet>
+            </form>
+        </field>
+
+    </record>
+
+
+<record id="action_doctor" model="ir.actions.act_window">
+    <field name="name">Doctor</field>
+    <field name="type">ir.actions.act_window</field>
+    <field name="res_model">hospital.doctor</field>
+    <field name="view_mode">tree,form</field>
+    <field name="context">{}</field>
+    <field name="help" type="html">
+        <p class="o_view_nocontent_smiling_face">Testing my odoo app
+            create first patient!
+        </p>
+    </field>
+</record>
+<menuitem id="hospital_doctor" name="Doctor" parent="hospital_root" action="action_doctor"/>
+
+</odoo>
